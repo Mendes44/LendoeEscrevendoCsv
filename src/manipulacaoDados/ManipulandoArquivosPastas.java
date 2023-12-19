@@ -42,7 +42,7 @@ conforme exemplo.
 		// Criando a pasta mais o arquivo de saida
 		boolean success = new File (sourceFolderStr + "//out").mkdir();
 		
-		String targetFileStr = sourceFileStr + "//out/summary.csv";
+		String targetFileStr = sourceFolderStr + "//out/summary.csv";
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(sourceFileStr))){
 			
@@ -66,7 +66,9 @@ conforme exemplo.
 					bw.newLine();
 				}
 				
-				System.out.println(targetFileStr + " CRIADO COM SUCESSO!!! ");
+				System.out.println(targetFileStr + " >>> CRIADO COM SUCESSO!!! ");
+				
+				}
 				
 			}catch (IOException e) {
 				System.out.println("ERRO AO GRAVAR ARQUIVO!" + e.getMessage());
